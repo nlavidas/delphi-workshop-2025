@@ -130,14 +130,9 @@ export default function Home() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="relative text-white py-24 sm:py-32 overflow-hidden"
-        style={{
-          backgroundImage: "url('https://images.pexels.com/photos/18659913/pexels-photo-18659913.jpeg?auto=compress&cs=tinysrgb&w=1920')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
-        }}
+        className="relative bg-gradient-to-br from-sky-600 via-blue-700 to-indigo-800 text-white py-24 sm:py-32 overflow-hidden"
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-900/80 via-blue-900/75 to-indigo-900/80"></div>
+        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "url('data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')" }}></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <motion.h1 
@@ -247,37 +242,36 @@ export default function Home() {
           </div>
           <div className="flex flex-wrap justify-center items-center gap-12">
             <div className="flex flex-col items-center">
-              <img 
-                src="https://www.elidek.gr/wp-content/uploads/2020/08/elidek_logo_en.png" 
-                alt="HFRI - Hellenic Foundation for Research and Innovation" 
-                className="h-20 object-contain grayscale hover:grayscale-0 transition-all"
-              />
-              <p className="text-xs text-gray-500 mt-2">HFRI</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <img 
-                src="https://greece20.gov.gr/wp-content/uploads/2020/12/greece2-logo-en.png" 
-                alt="Greece 2.0 - National Recovery and Resilience Plan" 
-                className="h-20 object-contain grayscale hover:grayscale-0 transition-all"
-              />
-              <p className="text-xs text-gray-500 mt-2">Greece 2.0</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <img 
-                src="https://en.uoa.gr/fileadmin/user_upload/logos/uoa_logo_EN.jpg" 
-                alt="National and Kapodistrian University of Athens" 
-                className="h-20 object-contain grayscale hover:grayscale-0 transition-all"
-              />
-              <p className="text-xs text-gray-500 mt-2">NKUA</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="h-20 px-8 flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 rounded-lg shadow-md hover:shadow-lg transition-all border-2 border-slate-700">
+              <div className="h-24 w-40 flex items-center justify-center bg-white rounded-lg shadow-md p-4">
                 <div className="text-center">
-                  <p className="text-white font-bold text-2xl tracking-widest" style={{ fontFamily: 'Georgia, serif' }}>ΝΣΣΔΛ</p>
-                  <p className="text-slate-300 text-xs font-medium tracking-wide mt-1">Naxos School</p>
+                  <p className="text-red-600 font-bold text-lg">H.F.R.I.</p>
+                  <p className="text-xs text-gray-600 mt-1">Hellenic Foundation</p>
                 </div>
               </div>
-              <p className="text-xs text-gray-500 mt-2">Naxos School</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="h-24 w-40 flex items-center justify-center bg-white rounded-lg shadow-md p-4">
+                <div className="text-center">
+                  <p className="font-bold text-lg"><span className="text-blue-700">Greece</span> <span className="text-green-500">2.0</span></p>
+                  <p className="text-xs text-gray-600 mt-1">Recovery Plan</p>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="h-24 w-40 flex items-center justify-center bg-white rounded-lg shadow-md p-4">
+                <div className="text-center">
+                  <p className="text-blue-800 font-bold text-sm">NKUA</p>
+                  <p className="text-xs text-gray-600 mt-1">Univ. of Athens</p>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="h-24 w-40 flex items-center justify-center bg-slate-900 rounded-lg shadow-md p-4">
+                <div className="text-center">
+                  <p className="text-white font-bold text-xl tracking-widest">ΝΣΣΔΛ</p>
+                  <p className="text-slate-300 text-xs mt-1">Naxos School</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -305,15 +299,8 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
               >
-                <div className="md:flex">
-                  <div className="md:flex-shrink-0 md:w-48 overflow-hidden">
-                    <img 
-                      src={`https://images.pexels.com/photos/${[4254165, 5011647, 3075993, 5011641, 3075994][index]}/pexels-photo.jpeg?auto=compress&cs=tinysrgb&w=400`}
-                      alt=""
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="p-8 flex-1">
+                <div>
+                  <div className="p-8">
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">{speaker.name}</h3>
                     <p className="text-primary-600 font-medium mb-4">{speaker.institution}</p>
                     <h4 className="text-lg font-semibold text-gray-800 mb-3 italic">&ldquo;{speaker.title}&rdquo;</h4>
@@ -324,7 +311,7 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Other Invited Speakers */}
+          {/* All Invited Speakers */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -332,9 +319,17 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="mt-16 pt-12 border-t-2 border-gray-300"
           >
-            <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">Other Invited Speakers</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">Invited Speakers</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 max-w-6xl mx-auto">
               {[
+                'Prof. Dag Trygve Truslew Haug',
+                'Prof. George Mikros',
+                'Prof. Ioanna Sitaridou',
+                'Dr. Alexander Tantos',
+                'Prof. Dr. Carola Trips',
+                'Prof. Nikolaos Lavidas',
+                'Assoc. Prof. Kiki Nikiforidou',
+                'Dr. Angeliki Geka',
                 'Theodoros Michalareas',
                 'Vassileios Symeonidis',
                 'Sofia Chionidi',
@@ -344,13 +339,13 @@ export default function Home() {
               ].map((name, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, scale: 0.9 }}
+                  initial={{ opacity: 0, scale: 0.95 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.05 }}
-                  className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow border border-gray-200"
+                  transition={{ duration: 0.3, delay: index * 0.03 }}
+                  className="bg-gradient-to-br from-white to-gray-50 rounded-lg shadow-sm p-4 text-center hover:shadow-md transition-shadow border border-gray-200"
                 >
-                  <p className="text-lg font-semibold text-gray-800">{name}</p>
+                  <p className="text-sm font-semibold text-gray-800">{name}</p>
                 </motion.div>
               ))}
             </div>
