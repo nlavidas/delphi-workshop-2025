@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && cp -r admin out/admin",
+    "build": "next build && cpx \"admin/**/*\" \"out/admin\"",
     "start": "next start",
     "lint": "next lint"
   },
@@ -22,6 +22,7 @@
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
     "autoprefixer": "^10.4.16",
+    "cpx": "^1.5.0",
     "eslint": "^8.52.0",
     "eslint-config-next": "13.5.6",
     "postcss": "^8.4.31",
