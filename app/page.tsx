@@ -1,8 +1,8 @@
 'use client';
 import { motion } from 'framer-motion';
 import { EnvelopeIcon, MapPinIcon, CalendarIcon, UserGroupIcon, AcademicCapIcon, GlobeAltIcon } from '@heroicons/react/24/outline';
-import logos from '../../content/logos.json';
-import homeContent from '../../content/home.json';
+import logos from '../content/logos.json';
+import homeContent from '../content/home.json';
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
