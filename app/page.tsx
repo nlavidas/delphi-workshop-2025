@@ -22,7 +22,7 @@ const keynotes = [
   },
   {
     name: 'Prof. George Mikros',
-    institution: 'University of Qatar / National and Kapodistrian University of Athens',
+    institution: 'University of Qatar',
     title: 'LLMs and the Stylometric Challenge of Ancient Greek Prose: Opportunities and Limitations',
     bio: 'Professor of Computational Linguistics specializing in quantitative text analysis, stylometry, and authorship attribution for Greek texts. Pioneer in applying statistical methods to Ancient and Modern Greek.'
   },
