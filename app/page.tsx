@@ -102,7 +102,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex items-center">
-              <span className="text-xl font-bold text-primary-600">Digital Diachrony 2025</span>
+              <span className="text-xl font-bold text-primary-600">Workshop on Corpus-Based Approaches</span>
             </div>
             <div className="hidden md:ml-6 md:flex md:space-x-8">
               <a href="#about" className="border-transparent text-gray-700 hover:border-primary-500 hover:text-primary-600 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium transition-colors">
@@ -141,7 +141,7 @@ export default function Home() {
               transition={{ delay: 0.2, duration: 0.8 }}
               className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl"
             >
-              Digital Diachrony 2025
+              Workshop on Corpus-Based Approaches
             </motion.h1>
             <motion.p 
               initial={{ opacity: 0, y: 30 }}
