@@ -235,13 +235,10 @@ export default function Home() {
       {/* Logos Section */}
       <section className="py-16 bg-white border-y border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h3 className="text-lg font-semibold text-gray-600 tracking-wider uppercase">Supported By</h3>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 items-center justify-items-center">
             {logos.items.map((logo: { name: string; src: string; href: string }) => (
-              <a key={logo.name} href={logo.href} target="_blank" rel="noopener noreferrer" className="flex justify-center grayscale hover:grayscale-0 transition-all duration-300">
-                <img src={logo.src} alt={logo.name} className="h-16 object-contain" />
+              <a key={logo.name} href={logo.href} target="_blank" rel="noopener noreferrer" className="flex justify-center hover:opacity-80 transition-all duration-300">
+                <img src={logo.src} alt={logo.name} className="h-24 object-contain" />
               </a>
             ))}
           </div>
@@ -350,14 +347,16 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
+              className="space-y-4"
             >
-              <img src={homeContent.venue_image} alt="European Cultural Centre of Delphi" className="rounded-lg shadow-lg" />
+              <img src={homeContent.venue_image} alt="European Cultural Centre of Delphi" className="rounded-lg shadow-lg w-full" />
+              <img src="images/Delphi-Eur Cultural Center-2.webp" alt="Conference venue interior" className="rounded-lg shadow-lg w-full" />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 20 }}
@@ -412,7 +411,7 @@ export default function Home() {
                   <div className="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                     <dt className="text-sm font-medium text-gray-500">Organizers</dt>
                     <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                      <p>Lavidas, Nikiforidou, Geka, Symeonidis, Chionidi, Tsiropina, Plakoutsi</p>
+                      <p>Nikolaos Lavidas, Kiki Nikiforidou, Vassiliki Geka, Vassileios Symeonidis, Sofia Chionidi, Anastasia Tsiropina, Eleni Plakoutsi</p>
                       <p className="mt-2 text-gray-600">National and Kapodistrian University of Athens</p>
                       <p className="mt-1">
                         <a href="mailto:nlavidas@enl.uoa.gr" className="text-primary-600 hover:text-primary-500">
@@ -439,7 +438,7 @@ export default function Home() {
             </div>
             <div className="px-5 py-2">
               <a href="#keynotes" className="text-base text-gray-300 hover:text-white">
-                Plenary
+                Speakers
               </a>
             </div>
             <div className="px-5 py-2">
