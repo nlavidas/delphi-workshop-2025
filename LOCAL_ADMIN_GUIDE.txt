@@ -1,0 +1,50 @@
+📝 SIMPLE LOCAL CMS EDITOR - QUICK GUIDE
+=========================================
+
+WHAT IS THIS?
+-------------
+A simple, no-authentication local tool to edit your website content.
+
+HOW TO USE:
+-----------
+1. Open the file "local-admin.html" in your web browser
+   (Just double-click it or right-click → Open with → Browser)
+
+2. Edit your content:
+   - Homepage images (Hero background, About section, Venue section)
+   - Partner logos (names, images, links)
+
+3. Click "Export JSON Files" button
+
+4. Two files will download to your Downloads folder:
+   - home.json
+   - logos.json
+
+5. Replace the old files in the "content" folder with these new files:
+   - Move downloaded files to: c:\Users\nlavi\CascadeProjects\personal-website\content\
+
+6. Commit and push to GitHub:
+   Open terminal in the project folder and run:
+   
+   git add content/
+   git commit -m "Update website content"
+   git push origin main
+
+7. Wait 1-2 minutes for GitHub Actions to deploy
+
+8. Your changes will be live!
+
+BENEFITS:
+---------
+✅ No authentication needed
+✅ Works offline
+✅ Simple and fast
+✅ No complex setup
+✅ Visual editing interface
+
+TIPS:
+-----
+- Use high-quality image URLs (at least 1200px wide for backgrounds)
+- Test image URLs in browser before adding them
+- Keep partner logo images around 300px wide for best results
+- Always commit and push after making changes

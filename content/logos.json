@@ -2,12 +2,12 @@
   "items": [
     {
       "name": "Hellenic Foundation for Research and Innovation",
-      "src": "https://upload.wikimedia.org/wikipedia/el/thumb/7/72/Logo_of_the_Hellenic_Foundation_for_Research_and_Innovation.svg/320px-Logo_of_the_Hellenic_Foundation_for_Research_and_Innovation.svg.png",
+      "src": "/images/HFRI.png",
       "href": "https://www.elidek.gr/en/homepage/"
     },
     {
       "name": "Greece 2.0",
-      "src": "https://upload.wikimedia.org/wikipedia/el/thumb/c/c3/Greece_2.0_logo.svg/320px-Greece_2.0_logo.svg.png",
+      "src": "/images/Greece 2.0.png",
       "href": "https://greece20.gov.gr/"
     },
     {
@@ -16,8 +16,13 @@
       "href": "https://en.uoa.gr/"
     },
     {
+      "name": "European Cultural Centre of Delphi",
+      "src": "/images/delphi-eng-logo.svg",
+      "href": "https://eccd.gr/"
+    },
+    {
       "name": "Naxos School of Diachronic Linguistics",
-      "src": "https://via.placeholder.com/150x80.png?text=Naxos+School",
+      "src": "/images/Naxos Diachronic Linguistics.jpg",
       "href": "#"
     },
     {
@@ -26,8 +31,8 @@
       "href": "https://chs.harvard.edu/"
     },
     {
-      "name": "Athens Diachronic Corpus",
-      "src": "https://via.placeholder.com/150x80.png?text=AthDGC",
+      "name": "Athens Digital Glossa Chronos",
+      "src": "/images/Athens Digital Glossa Chronos (AthDGC).jpg",
       "href": "#"
     }
   ]

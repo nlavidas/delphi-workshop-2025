@@ -23,7 +23,7 @@ const keynotes = [
   },
   {
     name: 'George Mikros',
-    institution: 'University of Qatar',
+    institution: 'University of Qatar, Qatar',
     title: 'Plenary Speaker'
   },
   {
@@ -271,8 +271,8 @@ export default function Home() {
                 className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg shadow-lg p-8 text-center hover:shadow-xl transition-shadow border border-blue-200"
               >
                 <div className="text-4xl font-bold text-blue-600 mb-4">{index + 1}</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">{speaker.name}</h3>
-                <p className="text-gray-600 font-medium">{speaker.institution}</p>
+                <h3 className="text-3xl font-bold text-gray-900 mb-2">{speaker.name}</h3>
+                <p className="text-lg text-gray-600 font-medium">{speaker.institution}</p>
               </motion.div>
             ))}
           </div>
@@ -289,32 +289,32 @@ export default function Home() {
             transition={{ duration: 0.6 }}
           >
             <h3 className="text-3xl font-extrabold text-gray-900 text-center mb-12">Invited Speakers</h3>
-            <div className="max-w-3xl mx-auto bg-white/90 backdrop-blur-sm rounded-xl shadow-2xl p-10 border border-gray-200">
-              <ul className="space-y-4">
-                {[
-                  'Anna Piata',
-                  'Mirjam Fried',
-                  'Francesca Dell\'Oro',
-                  'Daniel Riaño Rufilanchas',
-                  'Iván Andrés-Alba',
-                  'Stavroula Kefala',
-                  'Esteban Belmehdi',
-                  'Ioanna Papadopoulou',
-                  'Julien Razanajao'
-                ].map((name, index) => (
-                  <motion.li
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: index * 0.05 }}
-                    className="flex items-center py-4 border-b border-gray-200 last:border-0 hover:bg-primary-50 transition-colors rounded px-4"
-                  >
-                    <span className="w-2 h-2 bg-blue-600 rounded-full mr-4 flex-shrink-0"></span>
-                    <p className="text-base font-medium text-gray-700">{name}</p>
-                  </motion.li>
-                ))}
-              </ul>
+            <div className="max-w-5xl mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {[
+                { name: 'Anna Piata', institution: 'National and Kapodistrian University of Athens, Greece' },
+                { name: 'Mirjam Fried', institution: 'Charles University, Prague, Czech Republic' },
+                { name: 'Francesca Dell\'Oro', institution: 'University of Bologna, Italy' },
+                { name: 'Daniel Riaño Rufilanchas', institution: 'CSIC, Spain' },
+                { name: 'Iván Andrés-Alba', institution: 'Universidad de Murcia, Spain' },
+                { name: 'Stavroula Kefala', institution: 'Hellenic Open University, Greece' },
+                { name: 'Esteban Belmehdi', institution: 'CHS, Harvard University, USA' },
+                { name: 'Ioanna Papadopoulou', institution: 'CHS, Harvard University, USA' },
+                { name: 'Julien Razanajao', institution: 'CHS, Harvard University, USA' }
+              ].map((speaker, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: index * 0.05 }}
+                  className="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow border border-gray-200"
+                >
+                  <h4 className="text-2xl font-bold text-gray-900 mb-2">{speaker.name}</h4>
+                  {speaker.institution && (
+                    <p className="text-lg text-gray-600">{speaker.institution}</p>
+                  )}
+                </motion.div>
+              ))}
             </div>
           </motion.div>
         </div>
